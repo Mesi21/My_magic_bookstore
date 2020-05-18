@@ -23,7 +23,8 @@ class BooksForm extends React.Component {
               id="title"
             />
           </label>
-          { category.map(cat => (<option>{cat}</option>))}
+          { category.map(c => (<option>{c}</option>))}
+          <button type="submit" value="submit">Submit</button>
         </form>
       </div>
     );

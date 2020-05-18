@@ -12,6 +12,8 @@ class Booklist extends React.Component {
         </tr>
         <tr>
           <td />
+          <td />
+          <td />
         </tr>
       </table>
     );
