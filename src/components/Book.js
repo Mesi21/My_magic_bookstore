@@ -1,14 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-class Book extends Component {
-  state = {};
-  render() {
-    const book = this.props.book;
-
-    return (
-      <tr></tr>
-    );
-  }
+const Book = (props) => {
+  <tr>
+    <td>{props.id}</td>
+    <td>{props.title}</td>
+    <td>{props.category}</td>
+  </tr>
 }
+
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
 
 export default Book;
