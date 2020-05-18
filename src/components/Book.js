@@ -1,12 +1,17 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (props) => {
-  <tr>
-    <td>{props.id}</td>
-    <td>{props.title}</td>
-    <td>{props.category}</td>
-  </tr>
+class Book extends React.Component {
+  render() {
+    const { id, title, category } = this.props;
+    return (
+      <tr>
+        <td>{id}</td>
+        <td>{title}</td>
+        <td>{category}</td>
+      </tr>
+    );
+  }
 }
 
 Book.propTypes = {
