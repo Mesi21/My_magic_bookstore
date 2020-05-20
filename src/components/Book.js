@@ -15,7 +15,7 @@ class Book extends React.Component {
 }
 
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };

@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
-
 export const createBook = book => ({
-  type: 'CREATE_Book',
+  type: 'CREATE_BOOK',
   name: book,
 });
 
