@@ -14,8 +14,31 @@ class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      id: 0,
+      title: '',
+      category: '',
     };
+  }
+
+  handleChange = (ev) => {
+    ev.preventDefault();
+    switch (ev) {
+      case 'title':
+        this.setState({
+          ...this.state,
+          title: ev.target.value,
+        });
+        break;
+      case 'category':
+        this.setState({
+          ...this.state,
+          category: ev.target.value,
+        });
+        break;
+      default:
+        this.setState(prevState => ({ value: prevState.value }));
+        break;
+    }
   }
 
   render() {
@@ -29,10 +52,11 @@ class BooksForm extends Component {
               placeholder="enter the title of the book"
               name="title"
               id="title"
+              onChange={this.handleChange}
             />
           </label>
           <label htmlFor="select">
-            <select>
+            <select onChange={this.handleChange}>
               {category.map(c => (
                 <option key={c.id}>{c.name}</option>
               ))}
