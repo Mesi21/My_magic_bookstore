@@ -15,6 +15,7 @@
   "extends": ["plugin:react/recommended", "airbnb"],
   "plugins": ["react"],
   "rules": {
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
