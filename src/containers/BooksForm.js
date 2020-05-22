@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions';
 
 const category = [
   { id: 1, name: 'Action' },
@@ -18,27 +21,27 @@ class BooksForm extends Component {
       title: '',
       category: '',
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (ev) => {
     ev.preventDefault();
-    switch (ev) {
-      case 'title':
-        this.setState({
-          ...this.state,
-          title: ev.target.value,
-        });
-        break;
-      case 'category':
-        this.setState({
-          ...this.state,
-          category: ev.target.value,
-        });
-        break;
-      default:
-        this.setState(prevState => ({ value: prevState.value }));
-        break;
-    }
+    const { choice } = ev.target;
+    this.setState({ [choice]: ev.target.value });
+  }
+
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    const { title, category } = this.props;
+    this.props.createBook({ title, category });
+
+    this.setState({
+      title: '',
+      category: '',
+    });
+    ev.target.reset();
   }
 
   render() {
@@ -71,4 +74,8 @@ class BooksForm extends Component {
   }
 }
 
-export default BooksForm;
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
