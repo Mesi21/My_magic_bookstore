@@ -9,10 +9,10 @@ import mainReducer from './reducers';
 const idGen = () => Math.round(Math.random() * 100);
 
 const stateInit = {
-  books: [{ id: idGen(), title: 'The Da Vinci Code', category: 'Fiction' },
-    { id: idGen(), title: 'Shogun', category: 'Historical Fiction' },
-    { id: idGen(), title: 'The Way of the Peaceful Warrior', category: 'Fiction, Autobiography' },
-    { id: idGen(), title: 'The A.B.C. Murders ', category: 'Crime Novel' }],
+  books: [{ id: idGen(), title: 'The Da Vinci Code', category: 'Action' },
+    { id: idGen(), title: 'Shogun', category: 'History' },
+    { id: idGen(), title: 'The Way of the Peaceful Warrior', category: 'Biography' },
+    { id: idGen(), title: 'The A.B.C. Murders ', category: 'Action' }],
 };
 
 /* eslint-disable no-underscore-dangle */

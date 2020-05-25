@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
@@ -17,7 +16,7 @@ class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 0,
+    // id: 0,
       title: '',
       category: '',
     };
@@ -34,8 +33,8 @@ class BooksForm extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { title, category } = this.props;
-    this.props.createBook({ title, category });
+    const { title, category } = this.state;
+    createBook({ title, category });
 
     this.setState({
       title: '',
@@ -65,7 +64,7 @@ class BooksForm extends Component {
               ))}
             </select>
           </label>
-          <button type="submit" value="submit">
+          <button type="submit" onChange={this.handleSubmit} value="submit">
             Submit
           </button>
         </form>
