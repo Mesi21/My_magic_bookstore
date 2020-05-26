@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import mainReducer from './reducers';
 
-const idGen = () => Math.round(Math.random() * 100);
+const idGen = () => Math.floor(Math.random() * 100);
 
 const stateInit = {
   books: [{ id: idGen(), title: 'The Da Vinci Code', category: 'Action' },

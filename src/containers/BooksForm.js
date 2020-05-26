@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
 const category = [
+  { id: 0, name: '' },
   { id: 1, name: 'Action' },
   { id: 2, name: 'Biography' },
   { id: 3, name: 'History' },
@@ -16,7 +18,7 @@ class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    // id: 0,
+      // id: 0,
       title: '',
       category: '',
     };
@@ -27,23 +29,26 @@ class BooksForm extends Component {
 
   handleChange = (ev) => {
     ev.preventDefault();
-    const { choice } = ev.target;
-    this.setState({ [choice]: ev.target.value });
+    const { value, name } = ev.target;
+    this.setState({ [name]: value });
   }
 
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title, category } = this.state;
-    createBook({ title, category });
+    // console.log({ title, category });
+    const id = Math.floor(Math.random() * 100);
+    const { createBook } = this.props;
+    createBook({ id, title, category });
 
     this.setState({
       title: '',
       category: '',
     });
-    ev.target.reset();
   }
 
   render() {
+    const { title, category: cat } = this.state;
     return (
       <div>
         <form>
@@ -52,19 +57,20 @@ class BooksForm extends Component {
             <input
               type="text"
               placeholder="enter the title of the book"
+              value={title}
               name="title"
               id="title"
               onChange={this.handleChange}
             />
           </label>
           <label htmlFor="select">
-            <select onChange={this.handleChange}>
+            <select name="category" value={cat} onChange={this.handleChange}>
               {category.map(c => (
                 <option key={c.id}>{c.name}</option>
               ))}
             </select>
           </label>
-          <button type="submit" onChange={this.handleSubmit} value="submit">
+          <button type="submit" onClick={this.handleSubmit} value="submit">
             Submit
           </button>
         </form>
@@ -76,5 +82,10 @@ class BooksForm extends Component {
 const mapDispatchToProps = (dispatch) => ({
   createBook: (book) => dispatch(createBook(book)),
 });
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
 
 export default connect(null, mapDispatchToProps)(BooksForm);
