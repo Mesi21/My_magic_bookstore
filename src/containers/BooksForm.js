@@ -36,7 +36,6 @@ class BooksForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title, category } = this.state;
-    // console.log({ title, category });
     const id = Math.floor(Math.random() * 100);
     const { createBook } = this.props;
     createBook({ id, title, category });
