@@ -18,7 +18,6 @@ class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // id: 0,
       title: '',
       category: '',
     };
@@ -47,7 +46,7 @@ class BooksForm extends Component {
   }
 
   render() {
-    const { title, category: cat } = this.state;
+    const { title } = this.state;
     return (
       <div>
         <form>
@@ -63,7 +62,7 @@ class BooksForm extends Component {
             />
           </label>
           <label htmlFor="select">
-            <select name="category" value={cat} onChange={this.handleChange}>
+            <select name="category" onChange={this.handleChange}>
               {category.map(c => (
                 <option key={c.id}>{c.name}</option>
               ))}
