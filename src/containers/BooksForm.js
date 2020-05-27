@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import idGen from '../helpers/helper';
 
 const category = [
   { id: 0, name: '' },
@@ -35,21 +36,21 @@ class BooksForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title, category } = this.state;
-    const id = Math.floor(Math.random() * 100);
+    const id = idGen();
     const { createBook } = this.props;
     createBook({ id, title, category });
 
     this.setState({
       title: '',
-      category: '',
     });
+    ev.target.reset();
   }
 
   render() {
     const { title } = this.state;
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">
             The Title of the Book
             <input
@@ -59,6 +60,7 @@ class BooksForm extends Component {
               name="title"
               id="title"
               onChange={this.handleChange}
+              required
             />
           </label>
           <label htmlFor="select">
@@ -68,7 +70,7 @@ class BooksForm extends Component {
               ))}
             </select>
           </label>
-          <button type="submit" onClick={this.handleSubmit} value="submit">
+          <button type="submit" value="submit">
             Submit
           </button>
         </form>
