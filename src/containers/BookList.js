@@ -2,16 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import Option from '../components/Options';
 import { removeBook, changeFilter } from '../actions';
-import { catFilt, filterOpt } from '../components/CategoryFilter';
+import { catFilt } from '../components/CategoryFilter';
+
+const getBooksToDisplay = (state, books, filter) => {
+  switch (filter) {
+    case catFilt[0].all:
+      return books;
+    default:
+      return books.filter(book => book.category === filter);
+  }
+};
+
+const mapStateToProps = state => ({ books: getBooksToDisplay(state, state.books, state.filter) });
+
+const mapDispatchToProps = dispatch => ({
+  handleRemove: book => dispatch(removeBook(book)),
+  handleFilterChange: filter => dispatch(changeFilter(filter)),
+});
 
 const BookList = ({ books, handleRemove, handleFilterChange }) => (
   <div>
-    <select onChange={(currentTarget) => handleFilterChange(currentTarget.value)}>
-      {filterOpt.map(c => (
-        <option key={c.id} value={c.name}>{c.name}</option>
-      ))}
-    </select>
+    <Option handleFilterChange={(filter) => handleFilterChange(filter)} />
     <table>
       <thead>
         <tr>
@@ -34,25 +47,6 @@ const BookList = ({ books, handleRemove, handleFilterChange }) => (
     </table>
   </div>
 );
-
-const getBooksToDisplay = (state, books, filter) => {
-  switch (filter) {
-    case catFilt.all:
-      console.log(filter, books);
-      return books;
-    default:
-      console.log(filter, books);
-      return books.filter(book => book.category === filter);
-  }
-};
-
-
-const mapStateToProps = state => ({ books: getBooksToDisplay(state, state.books, state.filter) });
-
-const mapDispatchToProps = dispatch => ({
-  handleRemove: book => dispatch(removeBook(book)),
-  handleFilterChange: filter => dispatch(changeFilter(filter)),
-});
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(
