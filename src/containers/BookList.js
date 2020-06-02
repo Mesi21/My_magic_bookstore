@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
+import catFilt from '../components/CategoryFilter';
 
 const BookList = ({ books, handleRemove }) => (
   <table>
@@ -27,13 +28,23 @@ const BookList = ({ books, handleRemove }) => (
   </table>
 );
 
+const handleFilterChange = (state, books, filter) => {
+  switch (filter) {
+    case catFilt.all:
+      return books;
+    default:
+      return books.filter(book => book.category === filter);
+  }
+};
+
 const mapStateToProps = state => {
   const { books } = state;
-  return { books };
+  return { books: handleFilterChange(state, books, state.filter) };
 };
 
 const mapDispatchToProps = dispatch => ({
   handleRemove: book => dispatch(removeBook(book)),
+  handleFilterChange: filter => dispatch(changeFilter(filter)),
 });
 
 BookList.propTypes = {

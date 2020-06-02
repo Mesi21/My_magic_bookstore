@@ -6,12 +6,14 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import mainReducer from './reducers';
 import idGen from './helpers/helper';
+import catFilt from './components/CategoryFilter';
 
 const stateInit = {
   books: [{ id: idGen(), title: 'The Da Vinci Code', category: 'Action' },
     { id: idGen(), title: 'Shogun', category: 'History' },
     { id: idGen(), title: 'The Way of the Peaceful Warrior', category: 'Biography' },
     { id: idGen(), title: 'The A.B.C. Murders ', category: 'Action' }],
+  filter: catFilt.all,
 };
 
 /* eslint-disable no-underscore-dangle */
