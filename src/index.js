@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import mainReducer from './reducers';
 import idGen from './helpers/helper';
-import catFilt from './components/CategoryFilter';
+import { catFilt } from './components/CategoryFilter';
 
 const stateInit = {
   books: [{ id: idGen(), title: 'The Da Vinci Code', category: 'Action' },

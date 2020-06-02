@@ -1,4 +1,4 @@
-const catFilt = [
+export const catFilt = [
   { id: 0, all: 'All' },
   { id: 1, action: 'Action' },
   { id: 2, biography: 'Biography' },
@@ -9,4 +9,13 @@ const catFilt = [
   { id: 7, sciFi: 'Sci-fi' },
 ];
 
-export default catFilt;
+export const filterOpt = [
+  { id: 0, name: 'All' },
+  { id: 1, name: 'Action' },
+  { id: 2, name: 'Biography' },
+  { id: 3, name: 'History' },
+  { id: 4, name: 'Horror' },
+  { id: 5, name: 'Kids' },
+  { id: 6, name: 'Learning' },
+  { id: 7, name: 'Sci-fi' },
+];
