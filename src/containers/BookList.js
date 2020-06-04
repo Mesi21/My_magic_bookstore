@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import Option from '../components/Options';
 import { removeBook, changeFilter } from '../actions';
-import { catFilt } from '../components/CategoryFilter';
+import { catFilt } from '../utils/Options';
+import CategoryFilter from '../components/CategoryFilter';
 
 const getBooksToDisplay = (state, books, filter) => {
   switch (filter) {
@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
 
 const BookList = ({ books, handleRemove, handleFilterChange }) => (
   <div>
-    <Option handleFilterChange={(filter) => handleFilterChange(filter)} />
+    <CategoryFilter handleFilterChange={(filter) => handleFilterChange(filter)} />
     <table>
       <thead>
         <tr>
