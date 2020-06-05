@@ -35,7 +35,7 @@ Soon...
 
     * Email: mse212002@gmail.com
     * Github: @Mesi21
-    * LinkedIn: Molnar Emese
+    * LinkedIn: [Molnar Emese](https://www.linkedin.com/in/emesemesimolnar/)
 
 ## Show your support:
 
