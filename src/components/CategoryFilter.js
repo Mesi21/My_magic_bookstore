@@ -8,13 +8,18 @@ const CategoryFilter = ({ handleFilterChange }) => {
   };
 
   return (
-    <select onChange={handleChange}>
-      {filterOpt.map((c) => (
-        <option key={c.id} value={c.name}>
-          {c.name}
-        </option>
-      ))}
-    </select>
+    <div className="filter">
+      <p>
+        Filter by:
+        <select className="filterSelect" onChange={handleChange}>
+          {filterOpt.map((c) => (
+            <option key={c.id} value={c.name}>
+              {c.name}
+            </option>
+          ))}
+        </select>
+      </p>
+    </div>
   );
 };
 

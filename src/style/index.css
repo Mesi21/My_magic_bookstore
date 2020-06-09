@@ -1,17 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #f1eeee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.book-list {
+  width: 100%;
+  margin: 40px 0px;
+  background-color: #fff !important;
 }
 
-table {
-  
+.filter {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff !important;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.filterSelect {
+  margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff !important;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+form { 
+  background-color: #fff !important;
+}
+
+label {
+  width: 174px;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+  background-color: #fff !important;
+}
+
+input {
+  width: 1361px;
+  height: 1013px;
+  opacity: 0.2;
+  border-radius: 4px;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-color: var(--black-two);
 }

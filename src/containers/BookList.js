@@ -5,6 +5,7 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import { catFilt } from '../utils/Options';
 import CategoryFilter from '../components/CategoryFilter';
+import '../style/index.css';
 
 const getBooksToDisplay = (state, books, filter) => {
   switch (filter) {
@@ -23,28 +24,19 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const BookList = ({ books, handleRemove, handleFilterChange }) => (
-  <div>
+  <div className="book-list">
     <CategoryFilter handleFilterChange={(filter) => handleFilterChange(filter)} />
-    <table>
-      <thead>
-        <tr>
-          <th> ID </th>
-          <th> Title </th>
-          <th> Category </th>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map(({ id, title, category }) => (
-          <Book
-            key={id}
-            id={id}
-            title={title}
-            category={category}
-            clickHandler={() => handleRemove({ id, title, category })}
-          />
-        ))}
-      </tbody>
-    </table>
+    <div className="books-rendered">
+      {books.map(({ id, title, category }) => (
+        <Book
+          key={id}
+          id={id}
+          title={title}
+          category={category}
+          clickHandler={() => handleRemove({ id, title, category })}
+        />
+      ))}
+    </div>
   </div>
 );
 

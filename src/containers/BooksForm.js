@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 import idGen from '../helpers/helper';
+import '../style/index.css';
+
 
 const category = [
   { id: 0, name: '' },
@@ -52,7 +54,7 @@ class BooksForm extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">
-            The Title of the Book
+            Add a New Book
             <input
               type="text"
               placeholder="enter the title of the book"
