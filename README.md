@@ -3,6 +3,10 @@
 This project is about making a simple bookstore app using React-Redux.
 It was created with [Create-React-App](https://github.com/facebook/create-react-app)
 
+## Screenshot
+
+![screenshot](src/style/bookstore.png)
+
 ## Live version
 
 Soon...
