@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 1.9px;
 }
 
-.nav{
+.nav {
     width: 100%;
     height: 95px;
     background-color: #ffffff !important;
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
   .Bookstore-CMS {
-    margin-left: 80px;
+    margin-left: 360px;
     width: 270px;
     height: 37px;
     font-family: 'Montserrat', sans-serif;
@@ -53,3 +53,70 @@ h1, h2, h3, h4, h5, h6, p {
   .container {
     width: 100%;
   }
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .nav {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Bookstore-CMS {
+    margin: 0px;
+    height: 37px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0290ff;
+    background-color: #fff !important;
+  }
+  .menu {
+    margin: 20px 0px;
+    padding: 0px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Bookstore-CMS {
+    margin: 0px;
+    height: 37px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0290ff;
+    background-color: #fff !important;
+  }
+  .menu {
+    margin: 20px 0px;
+    padding: 0px;
+    font-size: 1em;
+  }
+}

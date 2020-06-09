@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { filterOpt } from '../utils/Options';
+import '../style/index.css';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const handleChange = ({ currentTarget }) => {
@@ -9,7 +10,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
 
   return (
     <div className="filter">
-      <p>
+      <p id="filt_id">
         Filter by:
         <select className="filterSelect" onChange={handleChange}>
           {filterOpt.map((c) => (

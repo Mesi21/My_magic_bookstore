@@ -51,28 +51,30 @@ class BooksForm extends Component {
   render() {
     const { title } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="footer">
+        <hr />
+        <form className="addBook" onSubmit={this.handleSubmit}>
           <label htmlFor="title">
-            Add a New Book
+            ADD A NEW BOOK
+            <br />
             <input
               type="text"
               placeholder="enter the title of the book"
               value={title}
               name="title"
-              id="title"
+              id="inputField"
               onChange={this.handleChange}
               required
             />
           </label>
           <label htmlFor="select">
-            <select name="category" onChange={this.handleChange}>
+            <select name="category" className="category" onChange={this.handleChange}>
               {category.map(c => (
                 <option key={c.id}>{c.name}</option>
               ))}
             </select>
           </label>
-          <button type="submit" value="submit">
+          <button type="submit" value="submit" className="btn btn-info catSbm">
             Submit
           </button>
         </form>
