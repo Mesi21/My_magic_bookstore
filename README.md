@@ -35,11 +35,24 @@ Soon...
 
 ## Contributor:
 
-- [Molnar Emese](https://github.com/Mesi21)
+Molnar Emese:
 
-    * Email: mse212002@gmail.com
-    * Github: @Mesi21
-    * LinkedIn: [Molnar Emese](https://www.linkedin.com/in/emesemesimolnar/)
+  - [Github](https://github.com/Mesi21)  
+  - [Email:](mailto:mse212002@gmail.com) - mse212002@gmail.com
+  - [Portfolio]()
+  - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
+  - [Twitter](https://twitter.com/buksimesi21) 
+  - [Angel List]()
+    
+## Features
+- Ability to add new books to the list
+- Ability  to remove books from the list
+- Ability to filter the list of the books by their category from a dropdown menu.
+
+## Future Features
+- User authentication feature.
+- Store the data using back-end API 
+- Add progress bar of completed reading percentage for each book.
 
 ## Show your support:
 
