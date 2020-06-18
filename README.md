@@ -47,7 +47,7 @@ Molnar Emese:
 ## Features
 - Ability to add new books to the list
 - Ability  to remove books from the list
-- Ability to filter the list of the books by their category from a dropdown menu.
+- Ability to filter the list of the books by their category.
 
 ## Future Features
 - User authentication feature.
