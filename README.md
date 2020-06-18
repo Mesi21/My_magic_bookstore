@@ -42,7 +42,7 @@ Molnar Emese:
   - [Portfolio]()
   - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
   - [Twitter](https://twitter.com/buksimesi21) 
-  - [Angel List]()
+  - [AngelList]()
     
 ## Features
 - Ability to add new books to the list
