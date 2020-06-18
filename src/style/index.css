@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f1eeee;
+}
+
+#filt_id {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f1eeee;
+}
+
+.book-list {
+  width: 100%;
+  margin: 40px 0px;
+  border-radius: 5px;
+  background-color: #fff !important;
+}
+
+.filter {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.filterSelect {
+  margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  background-color: #f1eeee;
+  border: 1px solid #888888;
+}
+
+form { 
+  width: 100%;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+}
+
+::placeholder {
+  padding-left: 30px;
+  width: 76px;
+  height: 19px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.category {
+  margin-left: 30px;
+  background-color: #fff !important;
+}
+
+.books-rendered {
+  margin: 0px;
+  border: 2px solid #f1eeee;
+  padding: 0px; 
+}
+
+.addBook {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+#inputField {
+  margin: 30px 0px;
+  width: 664px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+#submitBtn {
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
+
+.catSbm {
+  height: 45px;
+  margin: 0px 0px 5px 10px;
+}
