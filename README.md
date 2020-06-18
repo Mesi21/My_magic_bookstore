@@ -9,7 +9,7 @@ It was created with [Create-React-App](https://github.com/facebook/create-react-
 
 ## Live version
 
-Soon...
+* https://my-magic-bookstore.herokuapp.com/
 
 ## Get started
 
